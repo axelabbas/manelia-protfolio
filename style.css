@@ -16,6 +16,7 @@ body {
   padding-bottom: 30%;
 }
 .projectCard {
+    transform: scale(1.00);
     
   height: 100vh;
   position: relative;
@@ -24,18 +25,22 @@ body {
   margin-left: -30px;
 
   transition: 0.3s;
-  border-left: solid 10px white;
-  border-right:  solid 10px white;
+  border-left: solid 20px white;
+  border-right:  solid 20px white;
   clip-path: inset(0 15%);
+}
+#follow {
+    padding-right: 95px;
 }
 .projectImage {
   clip-path: inset(100% 100%);
-  filter: blur(0px);
+  filter: blur(3px);
   transition: 0.7s;
   z-index: 3;
   position: relative;
+  transform: scale(1.02);
 
-  -webkit-filter: blur(0px);
+  -webkit-filter: blur(3px);
 
   /* Full height */
   height: 100%;
@@ -80,6 +85,22 @@ body {
   transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;
+  font-size: 15px;
+}
+
+.outline {
+    opacity: 0;
+    transition: 0.3s;
+    border: solid 10px black;
+    position: absolute;
+    width: 190px;
+    height: calc(100% - 12px);
+    transform: scale(1.02);
+    top: 50%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+
+    z-index: 99;
 }
 h1 {
   font-family: "phonk";
@@ -88,12 +109,19 @@ h1 {
     z-index: 99;
   clip-path: inset(0 0%);
 }
+.projectCard:not(:hover) > .outline {
+    opacity: 1;
+}
+.projectCard:hover > .outline {
+    transition: 0s;
+    opacity: 0;
+}
 
 .projectCard:hover > .projectImage {
   clip-path: inset(0 0%);
 
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
+  filter: blur(.5px);
+  -webkit-filter: blur(.5px);
 }
 .projectCard:hover > .projectTitle {
   opacity: 0;
