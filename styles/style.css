@@ -1,32 +1,62 @@
 html,
 body {
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
+  color:  white;
+  background-color: black;
   overflow-x: hidden;
+  border: 0;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 @font-face {
   font-family: "phonk";
-  src: url("phonk.otf") format("opentype");
+  src: url("../assets/fonts/phonk.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+#nextBtn {
+  cursor: pointer;
+}
+#prevBtn {
+  cursor: pointer;
 }
 #main > div > div {
   padding-bottom: 30%;
 }
+#projects{
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.sets{
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.set{
+  margin: 10px;
+  height: 25px;
+  cursor: pointer;
+  width: 25px;
+  border-radius: 50%;
+  align-items: center;
+
+  background-color: white ;
+}
+.activeSet {
+  background-color: lightpink;
+}
 .projectCard {
-    transform: scale(1.00);
-    
-  height: 100vh;
+    transform: scale(1.0);
+  height: 90vh;
   position: relative;
   width: 450px;
   margin-right: -85px;
   margin-left: -85px;
-
   transition: 0.3s;
-  border-left: solid 20px white;
-  border-right:  solid 20px white;
+  border-left: solid 50px black;
+  border-right:  solid 50px black;
   clip-path: inset(0 20%);
 }
 #spacer {
@@ -38,7 +68,7 @@ body {
   transition: 0.7s;
   z-index: 3;
   position: relative;
-  transform: scale(1.01);
+  transform: scale(1.04);
 
   -webkit-filter: blur(3px);
 
@@ -56,7 +86,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-
+  transform: scale(1.02);
   z-index: 2;
   filter: blur(3px);
   transition: 0.3s;
@@ -110,13 +140,6 @@ h1 {
     z-index: 99;
   clip-path: inset(0 0%);
 }
-.projectCard:not(:hover) > .outline {
-    opacity: 1;
-}
-.projectCard:hover > .outline {
-    transition: 0s;
-    opacity: 0;
-}
 
 .projectCard:hover > .projectImage {
   clip-path: inset(0 0%);
@@ -129,10 +152,27 @@ h1 {
 }
 
 @media (min-width: 400px) {
-  section {
-    display: flex;
+  .parent {
     justify-content:space-between;
-    padding-left: 10px;
-    padding-right: 50px;
+
+    display: flex;
   }
+  .projectControl {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    overflow: visible;
+    /* justify-content: space-around; */
+  }
+   
+  #main {
+    width: 20%;
+  }
+  
+  .projectCards {
+    padding: 0 60px;
+    display: flex;
+    /* justify-content:space-between; */
+  }
+  
 }

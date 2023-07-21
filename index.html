@@ -1,63 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Protfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="parent">
-        <section id="main">
-            <div class="content">
-                <div class="title">
-                    <a>Manelia</a>
-                </div>
-                <h1 id="follow">FOLLOW THE ART</h1>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="projectCard" onclick="window.open('https://www.instagram.com/p/CmgXNY5NzNU/', '_blank');"
-                style="cursor: pointer">
-                <div class="projectImage" style="background-image: url('/steelballrun.jpg')"></div>
-                <div class="projectImage2" style="background-image: url('/steelballrun.jpg')"></div>
-                <div class="projectTitle">
-                    <h1>STEEL BALL<br>RUN</h1>
-                </div>
-                <div class="outline"></div>
-            </div>
-            <div class="projectCard" onclick="window.open('https://www.instagram.com/p/CuCrYNMoFE7/', '_blank');"
-                style="cursor: pointer">
-                <div class="projectImage" style="background-image: url('/neongenesis.jpg')"></div>
-                <div class="projectImage2" style="background-image: url('/neongenesis.jpg')"></div>
-                <div class="projectTitle">
-                    <h1>Evangelion<br />Zero Genisis</h1>
-                </div>
-                <div class="outline"></div>
-            </div>
-            <div class="projectCard" onclick="window.open('https://www.instagram.com/p/Cn6d8HuofFw/', '_blank');"
-                style="cursor: pointer">
-                <div class="projectImage" style="background-image: url('/zenita.jpg')"></div>
-                <div class="projectImage2" style="background-image: url('/zenita.jpg')"></div>
-                <div class="projectTitle">
-                    <h1>ZENITA</h1>
-                </div>
-                <div class="outline"></div>
-            </div>
-            <div class="projectCard" onclick="window.open('https://www.instagram.com/p/Cob_czOIIsV/?img_index=1', '_blank');"
-                style="cursor: pointer">
-                <div class="projectImage" style="background-image: url('/mirai.jpg')"></div>
-                <div class="projectImage2" style="background-image: url('/mirai.jpg')"></div>
-                <div class="projectTitle">
-                    <h1>YUNOGASI</h1>
-                </div>
-                <div class="outline"></div>
-            </div>
-        </section>
-    </section>
-</body>
-<script src="main.js"></script>
+      <section id="main">
+        <div class="content">
+          <div class="title">
+            <a>Manelia</a>
+          </div>
+          <h1 id="follow">FOLLOW THE ARTTTTTTTTT</h1>
+          <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="projectControl">
+          <img
+            src="assets/svgs/backarrowwhite.svg"
+            onclick="prev()"
+            id="prevBtn"
+            width="100"
+          />
 
+          <div class="projectCards">
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/CmgXNY5NzNU/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/steelballrun.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/steelballrun.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>STEEL BALL<br />RUN</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/CuCrYNMoFE7/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/neongenesis.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/neongenesis.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>Evangelion1<br />Zero Genesis</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/Cn6d8HuofFw/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/zenita.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/zenita.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>ZENITA</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/Cob_czOIIsV/?img_index=1', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/mirai.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/mirai.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>YUNOGASI</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/CmgXNY5NzNU/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/steelballrun.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/steelballrun.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>STEEL BALL<br />RUN</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/CuCrYNMoFE7/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/neongenesis.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/neongenesis.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>Evangelion2<br />Zero Genesis</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/Cn6d8HuofFw/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/zenita.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/zenita.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>ZENITA</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/Cob_czOIIsV/?img_index=1', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/mirai.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/mirai.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>YUNOGASI</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/CmgXNY5NzNU/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/steelballrun.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/steelballrun.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>STEEL BALL<br />RUN</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/CuCrYNMoFE7/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/neongenesis.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/neongenesis.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>Evangelion3<br />Zero Genesis</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/Cn6d8HuofFw/', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/zenita.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/zenita.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>ZENITA</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+            <div
+              class="projectCard"
+              onclick="window.open('https://www.instagram.com/p/Cob_czOIIsV/?img_index=1', '_blank');"
+              style="cursor: pointer"
+            >
+              <div
+                class="projectImage"
+                style="background-image: url('assets/images/projects/mirai.jpg')"
+              ></div>
+              <div
+                class="projectImage2"
+                style="background-image: url('assets/images/projects/mirai.jpg')"
+              ></div>
+              <div class="projectTitle">
+                <h1>YUNOGASI</h1>
+              </div>
+              <div class="outline"></div>
+            </div>
+          </div>
+          <!-- <img src = "nextarrowwhite.svg" alt="Next Arrow" id="nextBtn"/> -->
+          <img
+            src="assets/svgs/nextarrowwhite.svg"
+            onclick="next()"
+            id="nextBtn"
+            ,
+            width="100"
+          />
+        </div>
+        <div class="sets" id="sets"></div>
+      </section>
+    </section>
+  </body>
+  <script src="scripts/main.js"></script>
 </html>
