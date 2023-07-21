@@ -41,7 +41,6 @@ body {
   width: 25px;
   border-radius: 50%;
   align-items: center;
-
   background-color: white ;
 }
 .activeSet {
@@ -85,6 +84,7 @@ body {
   height: 100%;
   width: 100%;
   top: 0;
+  opacity: 0.6;
   left: 0;
   transform: scale(1.02);
   z-index: 2;
