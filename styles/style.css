@@ -1,8 +1,17 @@
+
+:root {
+  --primary: #C837B7;
+  --secondary: #393030;
+  --accent: #C492D3;
+  --bg: #1E1515;
+  --text: #FAFAFA;
+}
 html,
 body {
-  color:  white;
-  background-color: black;
-  overflow-x: hidden;
+  color:  var(--text);
+  background-color: var(--bg);
+  /* overflow-x: hidden; */
+  overflow-y: hidden;
   border: 0;
   height: 100%;
   margin: 0;
@@ -15,143 +24,193 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-#nextBtn {
-  cursor: pointer;
-}
-#prevBtn {
-  cursor: pointer;
-}
-#main > div > div {
-  padding-bottom: 30%;
-}
-#projects{
-  transition: opacity 0.5s;
-  opacity: 0;
-}
-.sets{
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.set{
-  margin: 10px;
-  height: 25px;
-  cursor: pointer;
-  width: 25px;
-  border-radius: 50%;
-  align-items: center;
-  background-color: white ;
-}
-.activeSet {
-  background-color: lightpink;
-}
-.projectCard {
-    transform: scale(1.0);
-  height: 90vh;
-  position: relative;
-  width: 450px;
-  margin-right: -85px;
-  margin-left: -85px;
-  transition: 0.3s;
-  border-left: solid 50px black;
-  border-right:  solid 50px black;
-  clip-path: inset(0 20%);
-}
-#spacer {
-    padding-right: calc(50vw - 10em);
-}
-.projectImage {
-  clip-path: inset(100% 100%);
-  filter: blur(3px);
-  transition: 0.7s;
-  z-index: 3;
-  position: relative;
-  transform: scale(1.04);
 
-  -webkit-filter: blur(3px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-size: calc(1080px / 2);
-  background-repeat: no-repeat;
-}
-.projectImage2 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  opacity: 0.6;
-  left: 0;
-  transform: scale(1.02);
-  z-index: 2;
-  filter: blur(3px);
-  transition: 0.3s;
-
-  -webkit-filter: blur(3px);
-
-  /* Full height */
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.projectTitle {
-  color: white;
-  stroke: black;
-  -webkit-text-stroke: 0.3px black;
-  text-shadow: 3px 3px 30px black, -2px 1px 30px black;
-  transition: 0.3s;
-  text-align: center;
-  font-weight: bold;
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0;
-  margin: 0;
-  letter-spacing: 1px;
-  font-size: 16px;
-}
-
-/* .outline {
-    opacity: 0;
-    transition: 0.3s;
-    border: solid 10px black;
-    position: absolute;
-    width: 190px;
-    height: calc(100% - 12px);
-    transform: scale(1.02);
-    top: 50%;
-    left: 50%;
-  transform: translate(-50%, -50%);
-
-    z-index: 99;
-} */
-h1 {
-  font-family: "phonk";
-}
-.projectCard:hover {
-    z-index: 99;
-  clip-path: inset(0 0%);
-}
-
-.projectCard:hover > .projectImage {
-  clip-path: inset(0 0%);
-
-  filter: blur(.5px);
-  -webkit-filter: blur(.5px);
-}
-.projectCard:hover > .projectTitle {
-  opacity: 0;
-}
 
 @media (min-width: 400px) {
+  #nextBtn {
+    cursor: pointer;
+  }
+  #prevBtn {
+    cursor: pointer;
+  }
+  #main > div > div {
+    padding-bottom: 30%;
+  }
+  
+  .sets{
+    /* padding-bottom: 40px;
+    padding-top: 20px; */
+    box-shadow: 3px 3px 3px 3px  black;
+  
+    background-color: var(--secondary);
+    padding: 10px;
+    border-top-left-radius:     2em;
+  border-top-right-radius:    2em;
+  border-bottom-right-radius: 2em;
+  border-bottom-left-radius:  2em;
+    /* width: 200px; */
+    /* height: 15%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      background-color: var(--text);
+    transform: scale(1.2); /* Increase the scale when active */
+    position: relative;
+    overflow: hidden;
+  }
+  .set::before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .activeSet::before {
+    transform: scaleX(0);
+  }
+  .setsContainer{
+    padding-bottom: 35px;
+    /* border: solid 1px wheat; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #projects {
+    width: 85%;
+
+    transform: scale(0.9);
+    float: left;
+  }
+  .set{
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform-origin: center;
+    background-color: var(--bg);
+    transform: scale(1);
+    margin: 5px;
+    height: 15px;
+    cursor: pointer;
+    width: 15px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: var(--bg) ;
+  }
+  .activeSet {
+    background-color: var(--accent);
+  }
+  .projectCard {
+      transform: scale(1.0);
+    height: 95vh;
+    position: relative;
+    width: 22vw;
+    margin-right: -85px;
+    margin-left: -85px;
+    transition: 0.3s;
+    border-left: solid 50px var(--bg);
+    border-right:  solid 50px var(--bg);
+    clip-path: inset(0 20%);
+  }
+  #spacer {
+      padding-right: calc(50vw - 10em);
+  }
+  .projectImage {
+    clip-path: inset(100% 100%);
+    filter: blur(3px);
+    transition: 0.7s;
+    z-index: 3;
+    position: relative;
+    transform: scale(1.04);
+  
+    -webkit-filter: blur(3px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: calc(1080px / 2);
+    background-repeat: no-repeat;
+  }
+  .projectImage2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0.6;
+    left: 0;
+    transform: scale(1.02);
+    z-index: 2;
+    filter: blur(3px);
+    transition: 0.3s;
+  
+    -webkit-filter: blur(3px);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .blackBg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg);
+    transform: scale(1.02);
+    z-index: 2;
+    filter: blur(3px);
+    transition: 0.3s;
+  
+    -webkit-filter: blur(3px);
+  
+ 
+  
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .projectTitle {
+    color: var(--text);
+    stroke: black;
+    -webkit-text-stroke: 0.3px black;
+    text-shadow: 3px 3px 30px black, -2px 1px 30px black;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+  
+
+  h1 {
+    font-family: "phonk";
+  }
+  .projectCard:hover {
+      z-index: 99;
+    clip-path: inset(0 0%);
+  }
+  
+  .projectCard:hover > .projectImage {
+    clip-path: inset(0 0%);
+  
+    filter: blur(.5px);
+    -webkit-filter: blur(.5px);
+  }
+  .projectCard:hover > .projectTitle {
+    opacity: 0;
+  }
   .parent {
     justify-content:space-between;
 
@@ -160,19 +219,22 @@ h1 {
   .projectControl {
     display: flex;
     align-items: center;
-    width: 70%;
     overflow: visible;
     /* justify-content: space-around; */
   }
    
   #main {
-    width: 20%;
+    word-wrap: break-word;
+    width: 15%;
+    overflow: hidden;
+    /* padding-right: 15vw; */
   }
   
   .projectCards {
     padding: 0 60px;
     display: flex;
-    /* justify-content:space-between; */
+    transition: opacity 0.5s;
+    opacity: 0;
   }
   
 }

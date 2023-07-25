@@ -1,5 +1,5 @@
 const projectCards = document.querySelectorAll(".projectCard");
-const projectsSection = document.getElementById("projects");
+const projectsSection = document.getElementById("projectCards");
 const sets = document.getElementById("sets");
 let currentIndex = 0;
 const cardsToShow = 4;
@@ -16,10 +16,16 @@ for (let i = 0; i < amountOfSets; i++) {
   set.classList.add("set");
 
   set.onclick = function () {
-    clearInterval(timerInterval);
-    currentIndex = i * cardsToShow;
-    showCards();
-    timerInterval = setInterval(nextSetOrPause, timerDuration);
+    if (currentIndex != i *cardsToShow){
+      console.log(currentIndex);
+      console.log(i);
+      clearInterval(timerInterval);
+    
+      currentIndex = i * cardsToShow;
+      showCards();
+      timerInterval = setInterval(nextSetOrPause, timerDuration);
+    }
+
   };
   sets.appendChild(set);
 }
